@@ -34,8 +34,6 @@ module.controller('AppController', function($scope, Product, $http) {
                 
                 loadingDialog.show();
                 
-                console.log(result.text);
-            
                 $scope.search(result.text, function(product) {
                     $scope.history.unshift(product);
                     $scope.history = $scope.history.slice(0, 10);
